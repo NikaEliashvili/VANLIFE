@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+
+.home {
+    height: 100dvh;
+    /* max-height: 500px; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+.header {
+    padding: 2.25rem 1.625rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #FFF7ED;
+}
+
+.header>a {
+    color: #4D4D4D;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.header>a.logo {
+    font-weight: 900;
+    margin-right: auto;
+    font-size: 1.625rem;
+    color: black;
+    text-decoration: none;
+}
+
+.home-content {
+    background-color: rgb(33, 22, 2);
+    background-image: url('./src/images/backgroundImg.svg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+    color: white;
+}
+
+.home-content p {
+    font-weight: 500;
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+.home-content .btn {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    background-color: #FF8C38;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s;
+    box-shadow: 0 4px 10px rgba(46, 26, 4, 0.4);
+    border: none;
+}
+
+.home-content .btn:active {
+    transform: scale(0.99);
+    box-shadow: none;
+}
+
+.home-content a.btn {
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+.footer {
+    background-color: #252525;
+    text-align: center;
+    color: #AAAAAA;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1.5rem;
+
+}
+
+
+.about-content {
+    height: 100%;
+    width: 100%;
+}
+
+.about-image-div {
+    position: relative;
+    background-color: #243c49;
+    width: 100%;
+    height: 350px;
+    z-index: -1;
+    filter: brightness(0.9);
+}
+
+.about-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    max-height: 350px;
+    z-index: 1
+}
+
+.about-image-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./src/images/aboutImg.svg');
+    background-size: cover;
+    background-position: top;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+
+.about-content h1,
+.about-content p,
+.about-distination {
+    margin: 2rem 1.625rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content h1 {
+    font-weight: 700;
+    font-size: 1.825rem;
+    color: #161616;
+}
+
+.about-content p {
+    font-size: 1rem;
+}
+
+.about-distination {
+    padding: 3rem;
+    background-color: #FFCC8D;
+    border-radius: 0.5rem;
+}
+
+.about-distination h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content a.btn {
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.about-content .btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.625rem;
+    background-color: #161616;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.about-content a.btn:hover {
+    transform: scale(0.95);
+}
+
+
+
+.about .footer {
+    margin-top: 3rem;
+}
