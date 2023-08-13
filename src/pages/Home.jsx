@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../componenets/Header";
-import Footer from "../componenets/Footer";
 
 function HomeContent() {
   return (
@@ -21,7 +19,6 @@ export default function Home() {
   return (
     <div className="home">
       <HomeContent />
-      <Footer />
     </div>
   );
 }

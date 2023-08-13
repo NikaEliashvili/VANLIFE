@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../componenets/Header";
-import Footer from "../componenets/Footer";
 
 function AboutContent() {
   return (
@@ -35,7 +33,6 @@ export default function About() {
   return (
     <div className="about">
       <AboutContent />
-      <Footer />
     </div>
   );
 }
