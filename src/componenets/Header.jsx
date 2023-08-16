@@ -13,10 +13,8 @@ export default function Header() {
     function handleWidth() {
       if (window.innerWidth < 701) {
         setIsMenu(true);
-        console.log("Less Than 700");
       } else {
         setIsMenu(false);
-        console.log("More Than 700");
       }
     }
     window.addEventListener("resize", handleWidth);

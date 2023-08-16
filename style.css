@@ -13,6 +13,7 @@ body {
     background-color: #FFF7ED;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow-x: hidden;
 }
 
 h1,
@@ -135,19 +136,25 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(54, 53, 53, 1);
-
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: 0.3s;
 }
 
 .login-icon {
-    font-size: 1.1rem;
-
+    font-size: 1.2rem;
+    color: #000000;
 }
 
+.login-link:hover,
+.login-link.isActive {
+    padding: 0.5rem;
+    background-color: #000000;
+}
 
 .login-link:hover .login-icon,
 .login-link.isActive .login-icon {
-    filter: none;
+    color: white;
 }
 
 .menu-item .login-icon {
@@ -156,6 +163,7 @@ main {
 }
 
 .menu-item .login-link {
+    border-radius: 0;
     background-color: rgb(243, 232, 232);
 }
 
@@ -172,7 +180,7 @@ main {
 }
 
 .menu {
-    position: relative;
+    /* position: relative; */
     z-index: 1;
 }
 
@@ -181,7 +189,7 @@ main {
 .cgMenu-icon {
     font-size: 1.7rem;
     cursor: pointer;
-    position: relative;
+    /* position: relative; */
     animation: menu-anim 0.6s ease 0s 1;
     transition: 0.5s;
 }
@@ -207,15 +215,12 @@ main {
 
 .menu-dropdown {
     position: absolute;
-    top: 1.8rem;
+    top: 5rem;
     right: 0rem;
-    /* padding: 0.5rem 0.3rem; */
-    width: 150px;
-    border-radius: 0.4rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 0.4rem; */
     background-color: rgb(243, 232, 232);
     overflow: hidden;
 }
@@ -225,7 +230,6 @@ main {
     width: 100%;
     cursor: pointer;
     transition: 0.1s;
-    /* border-radius: 0.3rem; */
 }
 
 .menu-item:last-child a {
@@ -259,6 +263,13 @@ main {
     align-items: center;
     /* margin-top: auto; */
     font-weight: 500;
+    gap: 1rem;
+}
+
+.footer img {
+    display: inline-block;
+    width: 5rem;
+    filter: brightness(3);
 }
 
 .link-button {
@@ -558,7 +569,9 @@ main {
 .vans {
     padding-inline: 2rem;
     padding-bottom: 2rem;
+    margin: 0 auto;
     margin-bottom: 2rem;
+    width: fit-content;
 }
 
 .vans button {
@@ -570,17 +583,17 @@ main {
     margin-top: 1.2rem;
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem 0;
 }
 
 .van-list-filter-buttons>a {
-    margin-right: 15px;
+    margin-right: 1rem;
 }
 
 .vans-list {
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
 }
@@ -754,7 +767,7 @@ i[class*='van-type-'] {
     text-decoration: none;
     color: #4D4D4D;
     font-weight: 500;
-    padding: 5px 20px;
+    padding: 0.3rem 1.25rem;
     transition: all 0.1s;
 }
 
@@ -763,18 +776,6 @@ i[class*='van-type-'] {
     color: #161616;
     text-decoration: underline;
     transform: scale(1.05);
-}
-
-
-.host-nav {
-    display: flex;
-}
-
-.host-nav a {
-    text-decoration: none;
-    color: #4D4D4D;
-    font-weight: 500;
-    padding: 5px 20px;
 }
 
 .host-nav a:hover {
@@ -968,7 +969,7 @@ img.graph {
 }
 
 .host-income .transaction>h3 {
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 600;
     margin: 0;
 }
@@ -1161,11 +1162,207 @@ img.graph {
         margin-right: auto;
     }
 
+}
+
+
+
+
+@media (max-width: 430px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .home-content {
+        padding: 1rem;
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-weight: 300;
+    }
+
+    .about-image-div {
+        max-height: 200px;
+    }
+
+    .about-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .about-distination {
+        padding: 2rem 1rem;
+    }
+
+    .about-distination h4 {
+        font-size: 1rem;
+    }
+
     .vans-list {
-        height: fit-content;
-        grid-template-columns: 0.15fr 0.15fr;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .vans-list div span {
+        font-size: 1.1rem;
+    }
+
+    .host-van-info h3 {
+        font-size: 1rem;
+    }
+
+    .host-van-info p {
+        font-size: 0.9rem;
+    }
+
+    .host-nav a:first-child {
+        padding-left: 1.25rem;
+    }
+
+    .host-nav a {
+        padding-inline: 0.5rem;
+    }
+
+    .host-income .transaction {
+        padding: 1rem;
+    }
+
+    .host-income .transaction>h3 {
+        font-size: 1.5rem;
+    }
+
+    .host-income .transaction>p {
+        font-size: 1rem;
+    }
+
+    .host-van-detail {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .host-van-detail-info-text {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-right: auto;
+    }
+
+    .host-van-detail-info-text>h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .host-van-detail-info-text>h4 {
+        font-size: 0.9rem;
+        margin-block: 0;
+        font-weight: 400;
+    }
+
+    .host-van-detail-info-text .van-type {
+        font-size: 0.9rem;
+        margin-block: 0;
+    }
+
+    .host-van-detail-info h3 {
+        font-size: 1rem;
+    }
+
+    .host-van-detail-info span {
+        font-size: 0.8rem;
     }
 }
+
+@media (max-width: 300px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
+    .host-nav a {
+        font-size: 0.8rem;
+        padding-inline: 0.3rem;
+    }
+
+    .host-van-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .host-van-info p {
+        font-size: 0.7rem;
+    }
+
+    .host-van-single {
+        padding: 0.3rem;
+    }
+
+    .host-van-single .view {
+        margin: 0 0 1rem;
+        margin-left: auto;
+        padding-left: 1rem;
+    }
+
+    .host-income .transaction>h3 {
+        font-size: 1.25rem;
+    }
+
+    .host-income .transaction>p {
+        font-size: 1rem;
+    }
+
+    .host-van-detail-info-text>h3 {
+        font-size: 0.8rem;
+    }
+
+    .host-van-detail-info-text>h4 {
+        display: flex;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+
+    .host-van-detail-info-text .van-type {
+        font-size: 0.7rem;
+        margin-block: 0;
+    }
+}
+
+@media (max-width: 700px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .about-image-div {
+        max-height: 250px;
+    }
+
+    .about-content h1 {
+        font-size: 1.25rem;
+    }
+
+    .about-distination {
+        padding: 2rem 1rem;
+    }
+
+    .about-distination h4 {
+        font-size: 1rem;
+    }
+
+    .vans h1 {
+        font-size: 1.25rem;
+    }
+
+    .vans span {
+        font-size: 1.2rem;
+    }
+}
+
+
 
 /* ======= Sliding Animation ======= */
 

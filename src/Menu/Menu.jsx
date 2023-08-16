@@ -6,7 +6,6 @@ export { MenuContext };
 
 export default function Menu({ children, onOpen }) {
   const [open, toggleOpen] = useToggle();
-  console.log(open);
 
   return (
     <MenuContext.Provider value={{ open, toggleOpen }}>
