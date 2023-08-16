@@ -1,5 +1,5 @@
 import React from "react";
-import avatarUrl from "../images/avatar.svg";
+import vanlifeLogo from "../images/vanlife-logo.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Header() {
@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/" className="logo">
-        #VANLIFE
+        <img src={vanlifeLogo} alt="#VANLIFE" className="vanlife-logo" />
       </Link>
 
       <NavLink
