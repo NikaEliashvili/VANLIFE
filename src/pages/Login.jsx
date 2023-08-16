@@ -57,6 +57,15 @@ export default function Login() {
         <button disabled={status === "submitting"}>
           {status === "submitting" ? "Logging in..." : "Log in"}
         </button>
+
+        <p> Use this login Information:</p>
+
+        <p>
+          <b>Email:</b> b@b.com
+        </p>
+        <p>
+          <b>Password:</b> p123
+        </p>
       </form>
     </div>
   );
