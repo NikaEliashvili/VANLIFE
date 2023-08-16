@@ -1,5 +1,5 @@
 import React from "react";
-import vanlifeLogo from "../images/vanlife-logo.svg";
+import vanlifeLogo from "../images/VANLIFE-logo.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Header() {
