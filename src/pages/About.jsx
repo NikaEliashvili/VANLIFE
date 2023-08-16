@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import aboutImg from "../images/aboutImg.svg";
 
 function AboutContent() {
   return (
     <div className="about-content">
       <div className="about-image-div">
-        <img
-          className="about-image"
-          src="./src\images\aboutImg.svg"
-          alt="Image"
-        />
+        <img className="about-image" src={aboutImg} alt="Image" />
       </div>
       <h1>Don’t squeeze in a sedan when you could relax in a van.</h1>
       <p>
