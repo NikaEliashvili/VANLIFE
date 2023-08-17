@@ -704,12 +704,16 @@ i[class*='van-type-'] {
 /*  ================ VAN DETAIL PAGE ================  */
 
 .van-detail-container {
+    margin: 0 auto;
+    max-width: 500px;
     padding: 27px;
 }
 
 .van-detail-container .back-button {
     color: black;
     text-decoration: none;
+    margin-right: auto;
+    margin: 0;
 }
 
 .van-detail-container .back-button span {
@@ -827,6 +831,7 @@ i[class*='van-type-'] {
 }
 
 
+
 .host-van-detail-layout-container {
     background-color: white;
     padding: 24px;
@@ -860,8 +865,7 @@ i[class*='van-type-'] {
     display: block;
     color: black;
     text-decoration: none;
-    margin-top: 60px;
-    margin-left: 26px;
+    margin: 1.25rem 1.75rem;
 }
 
 .back-button span:hover {
